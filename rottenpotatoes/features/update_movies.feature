@@ -1,7 +1,7 @@
-Feature: destroy movies
+Feature: update movies
   As a rottenpotatoes user
-  So that I can contribute to the movies list
-  I want to be able to destroy movies
+  So that I can add new or correct wrong information of some movies 
+  I want to be able to update movies
   
 Background: movies in database
   
@@ -15,6 +15,8 @@ Background: movies in database
 Scenario: create new movies
   When I am on the RottenPotatoes home page
   And I follow "More about Alien"
-  And I press "Delete"
-  Then I should be on the new home page
-  And I should see "Movie 'Alien' deleted."
+  And I follow "Edit"
+  And I fill in "Director" with "Ridley Scott"
+  And I press "Update Movie Info"
+  Then I should be on the details page for "Alien"
+  And I should see "Alien was successfully updated."
