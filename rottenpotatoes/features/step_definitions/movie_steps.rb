@@ -14,9 +14,15 @@ Then /^the director of "(.*)" should be "(.*)"$/ do |movie_name, movie_director|
 end
 
 Then /^I should see "(.*)" before "(.*)"$/ do |e1, e2|
-  #keeps reporting "undefined method `+' for nil:NilClass (NoMethodError)", I don't know why
-  body = page.body.to_str
-  e1_index = body.index(e1)
-  e2_index = body.index(e2)
-  assert e1_index < e2_index
+#   keeps reporting "undefined method `+' for nil:NilClass (NoMethodError)", I don't know why
+#   body = page.body
+#   e1_index = body.index(e1)
+#   e2_index = body.index(e2)
+#   assert e1_index < e2_index
+ if page.respond_to? :should
+    page.body.should match /#{e1}.*#{e2}/m
+  else
+    # fails by reverse sorting
+    assert(page.body.should match /#{e1}.*#{e2}/m, 'error')
+  end
 end

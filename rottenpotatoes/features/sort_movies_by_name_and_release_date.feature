@@ -21,11 +21,13 @@ Background: movies in database
 Scenario: sort the list of movies by name in increasing order 
   Given I am on the home page
   When I follow "Movie Title"
-  Then I should see "Aladdin" before "The Incredibles"
+  Then I should be on the new home page
+  And I should see "Aladdin" before "The Incredibles"
 
 Scenario: sort the list of movies by release date in increasing order 
   Given I am on the home page
   When I follow "Release Date"
+  Then I should be on the new home page
   Then I should see "When Harry Met Sally" before "The Help"
 
  
