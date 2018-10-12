@@ -1271,3 +1271,59 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 192ms (Views: 187.4ms | ActiveRecord: 1.3ms)
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+id { "1" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+. (called from block (2 levels) in <top (required)> at /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/spec/factories/movie.rb:3)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+title { "Blazing Saddles" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+. (called from block (2 levels) in <top (required)> at /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/spec/factories/movie.rb:4)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+rating { "R" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+. (called from block (2 levels) in <top (required)> at /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/spec/factories/movie.rb:5)
+DEPRECATION WARNING: Static attributes will be removed in FactoryBot 5.0. Please use dynamic
+attributes instead by wrapping the attribute value in a block:
+
+release_date { "7/2/1974" }
+
+To automatically update from static attributes to dynamic ones,
+install rubocop-rspec and run:
+
+rubocop \
+  --require rubocop-rspec \
+  --only FactoryBot/AttributeDefinedStatically \
+  --auto-correct
+
+. (called from block (2 levels) in <top (required)> at /home/ec2-user/environment/hw-acceptance-unit-test-cycle/rottenpotatoes/spec/factories/movie.rb:6)
